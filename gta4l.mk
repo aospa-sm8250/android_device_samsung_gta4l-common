@@ -137,10 +137,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey
 
-# fastbootd
-PRODUCT_PACKAGES += \
-    fastbootd
-
 # Folio
 PRODUCT_PACKAGES += \
     folio_daemon
