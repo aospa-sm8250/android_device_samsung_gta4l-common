@@ -115,8 +115,6 @@ PRODUCT_PACKAGES += \
     init.qcom.recovery.rc \
     init.qcom.sensors.sh \
     init.qcom.sh \
-    init.qcom.usb.rc \
-    init.qcom.usb.sh \
     init.qti.chg_policy.sh \
     init.qti.dcvs.sh \
     init.ramplus.rc \
@@ -245,11 +243,14 @@ PRODUCT_PACKAGES += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
-    hardware/samsung
+    hardware/samsung \
+    vendor/qcom/opensource/usb/etc
 
 # USB
 PRODUCT_PACKAGES += \
-    android.hardware.usb-service.qti
+    android.hardware.usb-service.qti \
+    init.qcom.usb.rc \
+    init.qcom.usb.sh
 
 # WiFi
 PRODUCT_COPY_FILES += \
