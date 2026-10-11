@@ -215,15 +215,13 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/handheld_core_hardware.xml
 
 # Power
-PRODUCT_PACKAGES += \
-    android.hardware.power-service-qti
-
 $(call soong_config_set,qtipower,mode_ext_lib,//$(LOCAL_PATH):libpowermode-ext-gta4l)
 
 # QTI
 TARGET_COMMON_QTI_COMPONENTS := \
     init \
-    overlay
+    overlay \
+    perf
 
 # Seccomp
 PRODUCT_COPY_FILES += \
