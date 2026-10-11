@@ -222,7 +222,8 @@ $(call soong_config_set,qtipower,mode_ext_lib,//$(LOCAL_PATH):libpowermode-ext-g
 
 # QTI
 TARGET_COMMON_QTI_COMPONENTS := \
-    init
+    init \
+    overlay
 
 # Seccomp
 PRODUCT_COPY_FILES += \
