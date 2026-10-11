@@ -108,20 +108,14 @@ PRODUCT_PACKAGES += \
     fstab.emmc.ramdisk \
     fstab.firmware \
     fstab.ramplus \
-    init.qcom.early_boot.sh \
     init.qcom.factory.rc \
-    init.qcom.post_boot.sh \
-    init.qcom.rc \
-    init.qcom.recovery.rc \
     init.qcom.sensors.sh \
-    init.qcom.sh \
     init.qti.chg_policy.sh \
     init.qti.dcvs.sh \
     init.ramplus.rc \
     init.samsung.bsp.rc \
     init.samsung.rc \
-    init.target.rc \
-    ueventd.qcom.rc
+    init.target.rc
 
 # Display
 PRODUCT_PACKAGES += \
@@ -225,6 +219,10 @@ PRODUCT_PACKAGES += \
     android.hardware.power-service-qti
 
 $(call soong_config_set,qtipower,mode_ext_lib,//$(LOCAL_PATH):libpowermode-ext-gta4l)
+
+# QTI
+TARGET_COMMON_QTI_COMPONENTS := \
+    init
 
 # Seccomp
 PRODUCT_COPY_FILES += \
